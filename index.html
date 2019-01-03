@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tomagotchi Game</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+
+
+
+	<div class="first-screen container" id="start"> 
+
+		<div class="button-glow"  id="start-screen"> 
+			<h1>Welcome!</h1>
+
+			<h5> Name Your Friend</h5>
+			<input type="text" name="name">
+
+			<h5> Select One</h5>
+			<div class="pet-selection"> 
+				<img id="azurill" src="images/azurill.gif">
+				<img id="litwick" src="images/litwick.gif">
+			</div>
+			<br>
+			<div class="pet-selection">
+				<img id="cleffa" src="images/cleffa.gif">
+				<img id="togepi" src="images/togepi.gif">
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="active"> 
+		<header>
+			
+			<input type="text" id="petName" name="given-name" placeholder="Name">
+			<img id="pencil" src="images/pencil.png">
+		</header>
+		<div class="container"> 
+
+
+			<img class="pet animate bounce-1" id="mypet" src="images/litwick.gif">
+
+
+
+
+			
+
+		</div>
+		<div class="stats"> 
+			<span class="health"> Health </span> <progress value="50" max="100" id="health-bar"> </progress> 
+			<span class="happiness"> Happiness </span> <progress value="100" max="255" id="happiness-bar"> </progress>
+			<span class="shower"> Shower </span> <progress value="100" max="100" id="shower-bar"> </progress>
+			<span class="hunger"> Hunger </span> <progress value="100" max="100" id="hunger-bar"> </progress>
+
+		</div>
+
+	</div>
+	<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

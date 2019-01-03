@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Delius+Unicase');
+
+
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Delius Unicase', cursive;
+
+
+}
+
+
+/*start screen */
+
+#start{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	/*filter: blur(7px);*/
+}
+
+#start-screen {
+	background: #a4fcd7;
+	width: 500px;
+	height: 400px;
+	border-radius: 90px;
+	opacity: 0.75;
+	position: fixed;
+	padding: 20px;
+	text-align: center;
+
+
+	/*filter: blur(0px) !important;*/
+
+
+}
+
+input[type="text"] {
+	font-size: 20px;
+	font-family: 'Delius Unicase', cursive;
+	text-align: center;
+}
+
+
+.pet-selection {
+	opacity: 1;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+#cleffa, #togepi, #litwick {
+	height: 50%;
+}
+
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 -50px #203a2f; }
+  40% { box-shadow: 0 0 60px #203a2f; }
+  60% { box-shadow: 0 0 60px #203a2f; }
+  100% { box-shadow: 0 0 -50px #203a2f; }
+}
+
+.button-glow {
+  animation: glowing 2000ms infinite;
+}
+
+
+
+
+
+/* game started */
+
+.active {
+	display: none;
+}
+
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+
+
+
+	background: url("../images/backdrop.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 700px;
+	border: solid black 5px;
+
+}
+
+
+
+.pet {
+	width: 10%;
+}
+
+
+
+/*  header (name area)  */
+
+header {
+	padding: 15px;
+	position: fixed;
+	display: inline;
+}
+
+header input[type="text"] {
+
+
+	border: none;
+	background: transparent;
+	text-align: left;
+	width: 100px;
+}
+
+#pencil {
+	width: 6.5%;
+}
+
+#pencil:hover {
+	opacity: 0.4;
+}
+
+/*   stats  */
+
+.stats {
+	position: fixed;
+	padding: 15px;
+	top: 0px;
+	right: 0px;
+}
+
+.health {
+	color: red;
+
+}
+.happiness {
+	color: yellow;
+}
+.shower {
+	color: blue;
+}
+.hunger {
+	color: green;
+}
+
+
+
+/*  animations  */
+
+.animate {
+/*	align-self: flex-end;
+*/	animation-duration: 1.25s;
+	animation-iteration-count: infinite;
+	margin: 0 auto 0 auto;
+	transform-origin: bottom;
+
+}
+
+
+.bounce-1 {
+        animation-name: bounce-1;
+        animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+        0%   { transform: scale(1,1)    translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1) translateY(-100px); }
+        50%  { transform: scale(1,1)    translateY(0); }
+        100% { transform: scale(1,1)    translateY(0); }
+}
