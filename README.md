@@ -1,4 +1,4 @@
-# toma
+# Virtual Pet - Tomagotchi
 virtual pet application 
 
 
