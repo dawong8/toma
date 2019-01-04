@@ -52,6 +52,8 @@ $("#litwick,#cleffa,#togepi,#azurill").on("click", (e) => {
 			case "cleffa":
 				$pet.attr("src", "images/cleffa.gif");
 				break;
+			case "litwick": 
+				$("#special").toggleClass("hide");
 			default: 
 				break;
 		}
@@ -92,6 +94,7 @@ $(".container").on("click", (e) => {
 	//	console.log(pet);
 
 		const $tempName = $("<span/>").text(pet.name).css("font-size", "20px").attr("id", "petName");
+		//$tempName.css("color", "white");
 		$("#newName").replaceWith($tempName);
 	}
 
@@ -141,7 +144,9 @@ $("#press-lights").on("click", function(e) {
 		$(this).css({
 			background: "white"
 		});
-
+		// if (pet.type == "litwick") {
+		// 	$pet.css("box-shadow","0 0 200px #fff");
+		// }
 
 		lights = false;
 
@@ -187,8 +192,15 @@ function changeState() {
 		$(".active").css("display", "none");
 		$("#dead").toggleClass("hide");
 		$("#dead-screen").text(`${pet.name} survived for ${pet.age} days.`).css("font-size", "50px");
+		const $form = $("<form/>");
+		const $submit = $("<input/>").attr({
+			type: "submit", 
+			value: "Start Over?",
+			id: "submit"
+		});
 
-
+		$form.append($submit);
+		$("#dead-screen").append($form);
 		console.log("pet has died");
 	} 
 
